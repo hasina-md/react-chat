@@ -2,14 +2,18 @@ import React, { useMemo } from 'react';
 import { useRooms } from '../../contexts/RoomContext';
 import RoomInvitation from './RoomInvitation';
 import NoRoomSelected from './RoomSelection';
+<<<<<<< HEAD
 import App from './ChatWatermark'
+=======
+import ChatContainer from './ChatContainer';
+>>>>>>> refs/remotes/origin/main
 
 function ChatView() {
     const { selectedRoom, joinRoom } = useRooms();
     const { isOwner, isJoined } = selectedRoom || {};
 
     if(isOwner || isJoined) {
-        return "Display Message";
+        return <ChatContainer />
     }
 
 
